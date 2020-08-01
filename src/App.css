@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #ffd600;
 }
 
 .App-logo {
@@ -25,6 +26,14 @@
   color: #61dafb;
 }
 
+.albero {
+  background: #0c692b;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px rgb(11, 54, 29);
+}
+
 .rectangle {
   display: inline-block;
   text-align:center;
@@ -33,7 +42,7 @@
   background: #d50000;
   margin:5vw;
   position:relative;
-  box-shadow: 0 0 0 1.5px black;
+  box-shadow: 0 0 0 1.5px rgb(0, 0, 0);
   transform: rotate(20deg);
 }
 
@@ -53,11 +62,11 @@ svg {
 }
 
 footer {
-  /* position: relative; */
   left: 0;
   bottom: 0;
-  width: 100%;
-  background-color: black;
+  width: 100vw;
+  height: 13vh;
+  background-color: #454545;
   color: white;
   text-align: center;
 }

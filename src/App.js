@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './grifone_bianco.png';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import './App.css';
 
@@ -59,7 +60,7 @@ function App() {
                   direction="row"
                   justify="center"
                   alignItems="center"
-                  xs="12"
+                  xs={12}
                 >
                   <Grid item><p style={{color:"#000b76", margin:"1vw"}}>{index + 1}</p></Grid>
                     {
@@ -70,9 +71,33 @@ function App() {
             }
           </Grid>
     </header>
-    {/* <footer>
-      <p>CIAO</p>
-    </footer> */}
+    <footer style={{marginTop:"20px"}}>
+      <Grid 
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        xs={15}
+        spacing={3}
+      >
+        <Grid item><div class="albero"/></Grid>
+        <Grid item><div class="albero"/></Grid>
+        <Grid item><div class="albero"/></Grid>
+        <Grid item><div class="albero"/></Grid>
+      </Grid>
+      <Grid 
+        container
+        direction="row"
+        justify="left"
+        alignItems="center"
+        xs={15}
+        spacing={1}
+      >
+        <Grid item xs><p>_ _ _ _ _ _ _ _</p></Grid>
+        <Grid item xs><p style={{color:"#676767"}}>Giulio 2020</p></Grid>
+        <Grid item xs><p>_ _ _ _ _ _ _ _</p></Grid>
+      </Grid>
+    </footer>
     </div>
   );
 }
