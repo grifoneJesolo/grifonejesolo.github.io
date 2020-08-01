@@ -1,22 +1,9 @@
 import React from 'react';
 import logo from './grifone_bianco.png';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import './App.css';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
 
 const appartamenti = [
   [403, 401, 402], 
@@ -40,7 +27,6 @@ const inizio = new Date(2020, 6, 22);
 const oggi = new Date();
 
 function App() {
-  const classes = useStyles();
   const quantiGiorni = (Math.floor(Math.round(Math.abs((inizio - oggi) / oneDay)) / 3) % appartamenti.length - 1);
   let posizione_in_data = new Array(appartamenti.length);
   for (var i = 0; i < posizione_in_data.length; i++) {
@@ -49,7 +35,7 @@ function App() {
   }
   return (
     <div className="App">
-      <AppBar position="static" style={{ background: '#000b76' }}>
+      <AppBar position="static" style={{ background: '#000b76' }} elevation={0}>
         <Toolbar>
         <img src={logo} className="App-logo" alt="logo" />
         </Toolbar>
@@ -84,6 +70,9 @@ function App() {
             }
           </Grid>
     </header>
+    {/* <footer>
+      <p>CIAO</p>
+    </footer> */}
     </div>
   );
 }
