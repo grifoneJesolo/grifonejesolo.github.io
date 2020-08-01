@@ -1,5 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
+import Grid from '@material-ui/core/Grid';
 import './App.css';
 
 const appartamenti = [
@@ -38,21 +39,46 @@ function App() {
           <path fill="#000b76" fill-opacity="1" d="M0,224L30,197.3C60,171,120,117,180,96C240,75,300,85,360,117.3C420,149,480,203,540,224C600,245,660,235,720,208C780,181,840,139,900,144C960,149,1020,203,1080,208C1140,213,1200,171,1260,160C1320,149,1380,171,1410,181.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
         </svg>
           }
-        <p>
-          {
-          posizione_in_data.map(
-            righe => 
-              <p>
-                {
-                  righe.map(appa => <div class="rectangle"><span>{appa}</span></div>)
-                }
-              </p>
-            )
-          } 
-        </p>
-      </header>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+          >
+            {
+              posizione_in_data.map(
+                (righe, index) => 
+                <Grid
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                  xs="12"
+                >
+                  <Grid item><span style={{color:"#000b76"}}>{index + 1}</span></Grid>
+                    {
+                      righe.map(appa => <Grid item><div class="rectangle"><span>{appa}</span></div></Grid>)
+                    }
+                  </Grid>
+                )
+            }
+          </Grid>
+    </header>
     </div>
   );
 }
 
 export default App;
+
+        //   {
+        //   posizione_in_data.map(
+        //     righe => 
+        //       <p>
+        //         {
+        //           righe.map(appa => <div class="rectangle"><span>{appa}</span></div>)
+        //         }
+        //       </p>
+        //     )
+        //   } 
+        // </p>
+

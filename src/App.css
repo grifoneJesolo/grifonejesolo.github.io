@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(15px + 2vmin);
   color: white;
 }
 
@@ -31,10 +31,10 @@
 .rectangle {
   display: inline-block;
   text-align:center;
-  width: 100px;
-  height: 100px;
+  width: 10vh;
+  height: 10vh;
   background: #d50000;
-  margin:20px;
+  margin:5vw;
   position:relative;
   transform: rotate(45deg);
 }
@@ -43,8 +43,8 @@ span {
   position: relative;
   display: inline-block;
   text-align:center;
-  margin:20px;
-  margin-left:0px;
+  margin:5vw;
+  margin-left:3vw;
   /* margin-top:25px; */
   transform: rotate(-45deg);
 }
