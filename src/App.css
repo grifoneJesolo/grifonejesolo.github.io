@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(15px + 2vmin);
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -28,12 +28,13 @@
 .rectangle {
   display: inline-block;
   text-align:center;
-  width: 10vh;
-  height: 10vh;
+  width: 9vh;
+  height: 9vh;
   background: #d50000;
   margin:5vw;
   position:relative;
-  transform: rotate(45deg);
+  box-shadow: 0 0 0 1.5px black;
+  transform: rotate(20deg);
 }
 
 span {
@@ -43,7 +44,7 @@ span {
   margin:5vw;
   margin-left:3vw;
   /* margin-top:25px; */
-  transform: rotate(-45deg);
+  transform: rotate(-20deg);
 }
 
 svg {
