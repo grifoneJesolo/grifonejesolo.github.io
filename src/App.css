@@ -6,7 +6,6 @@
 .App-logo {
   height: 5vmin;
   pointer-events: none;
-  color:white;
   display: block;
   margin: 0 auto;
 }
@@ -34,17 +33,38 @@
   box-shadow: 0 0 0 1.5px rgb(11, 54, 29);
 }
 
-.rectangle {
-  display: inline-block;
-  text-align:center;
-  width: 9vh;
-  height: 9vh;
-  background: #d50000;
-  margin:5vw;
-  position:relative;
-  box-shadow: 0 0 0 1.5px rgb(0, 0, 0);
-  transform: rotate(20deg);
+@media (min-width: 0) {
+  .rectangle {
+    display: inline-block;
+    text-align:center;
+    width: 9vh;
+    height: 9vh;
+    background: #d50000;
+    margin:5vw;
+    position:relative;
+    box-shadow: 0 0 0 1.5px rgb(0, 0, 0);
+    transform: rotate(20deg);
+  }
+
 }
+
+
+@media (min-width: 600px) and (orientation:landscape) {
+
+  .rectangle {
+    display: inline-block;
+    text-align:center;
+    width: 9vw;
+    height: 9vw;
+    background: #d50000;
+    margin:5vw;
+    position:relative;
+    box-shadow: 0 0 0 1.5px rgb(0, 0, 0);
+    transform: rotate(20deg);
+  }
+
+}
+
 
 span {
   position: relative;
