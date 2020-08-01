@@ -55,7 +55,7 @@ function App() {
                   alignItems="center"
                   xs="12"
                 >
-                  <Grid item><span style={{color:"#000b76"}}>{index + 1}</span></Grid>
+                  <Grid item><span style={{color:"#000b76", margin:"1vw"}}>{index + 1}</span></Grid>
                     {
                       righe.map(appa => <Grid item><div class="rectangle"><span>{appa}</span></div></Grid>)
                     }
