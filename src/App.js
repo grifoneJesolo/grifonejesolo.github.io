@@ -59,6 +59,7 @@ function App() {
                   direction="row"
                   justify="center"
                   alignItems="center"
+                  key={index+100}
                 >
                   <Grid item key={index}><p style={{color:"#fffff", margin:"1vw"}} key={index}>{index + 1}</p></Grid>
                     {
