@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #ffc400;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -46,36 +47,19 @@
 }
 
 
-@media (min-width: 600px) and (orientation:landscape) {
-
-  .rectangle {
-    display: inline-block;
-    text-align:center;
-    width: 9vw;
-    height: 9vw;
-    background: #d50000;
-    margin:5vw;
-    position:relative;
-    box-shadow: 4px 1px 3px 1.5px rgb(168, 125, 4);
-    transform: rotate(20deg);
-  }
-
-}
-
-
 span {
   position: relative;
   display: inline-block;
   text-align:center;
   margin:5vw;
   margin-left:3vw;
-  /* margin-top:25px; */
   transform: rotate(-20deg);
 }
 
 svg {
   position: relative;
   transform: rotate(180deg);
+  overflow: hidden;
 }
 
 footer {
@@ -86,4 +70,17 @@ footer {
   background-color: #454545;
   color: white;
   text-align: center;
+}
+
+@media (min-width: 600px) and (orientation:landscape) {
+
+  .rectangle {
+    width: 9vw;
+    height: 9vw;
+  }
+
+  footer {
+    height: 13vw;
+  }
+
 }
