@@ -60,7 +60,7 @@ function App() {
                   alignItems="center"
                   xs={12}
                 >
-                  <Grid item><p style={{color:"#000b76", margin:"1vw"}}>{index + 1}</p></Grid>
+                  <Grid item><p style={{color:"#fffff", margin:"1vw"}}>{index + 1}</p></Grid>
                     {
                       righe.map(appa => <Grid item><div class="rectangle"><span>{appa}</span></div></Grid>)
                     }
@@ -92,7 +92,7 @@ function App() {
         spacing={1}
       >
         <Grid item xs><p>_ _ _ _ _ _ _ _</p></Grid>
-        <Grid item xs><p style={{color:"#676767"}}>Giulio 2020</p></Grid>
+        <Grid item xs><p style={{color:"#676767", fontSize:13}}>Giulio 2020 - #{quantiGiorni}</p></Grid>
         <Grid item xs><p>_ _ _ _ _ _ _ _</p></Grid>
       </Grid>
     </footer>
