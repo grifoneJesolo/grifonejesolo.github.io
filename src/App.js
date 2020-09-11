@@ -5,6 +5,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import './App.css';
 
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+
 const appartamenti = [
   [403, 401, 402], 
   [406, 404, 405],
@@ -27,15 +34,39 @@ const inizio = new Date(2020, 6, 22);
 const oggi = new Date();
 
 function App() {
-  console.log(oggi)
+  const [open, setOpen] = React.useState(oggi.getMonth() >= 8 || oggi.getMonth() < 6);
   const quantiGiorni = (Math.floor(Math.floor(Math.abs((inizio - oggi) / oneDay)) / 4) % appartamenti.length);
   let posizione_in_data = new Array(appartamenti.length);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   for (var i = 0; i < posizione_in_data.length; i++) {
     let pos_riga = quantiGiorni * 2;
     posizione_in_data[(i + quantiGiorni) % appartamenti.length] = [appartamenti[i][pos_riga%3], appartamenti[i][(pos_riga + 1)%3], appartamenti[i][(pos_riga + 2)%3]];
   }
+
   return (
     <div className="App">
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Posizione libera"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Dal 3 settembre a fine giugno gli ombrelloni non sono assegnati.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary" autoFocus>
+            Ok
+          </Button>
+        </DialogActions>
+      </Dialog>
       <AppBar position="static" style={{ background: '#2196f3' }} elevation={0}>
         <Toolbar>
         <img src={logo} className="App-logo" alt="logo" />
