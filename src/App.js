@@ -13,28 +13,28 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 const appartamenti = [
-  [403, 401, 402], 
-  [406, 404, 405],
-  ["T3", "T1", "T2"],
-  ["T6", "T4", "T5"],
-  ["T9", "T7", "T8"],
-  [103, 101, 102],
-  [106, 104, 105],
-  [109, 107, 108],
-  [203, 202, 201],
-  [206, 204, 205],
+  ["T5", "T6", "T4"], 
+  ["T8", "T9", "T7"],
+  [102, 103, 101],
+  [105, 106, 104],
+  [108, 109, 107],
+  [202, 203, 201],
+  [205, 206, 204],
   [209, 207, 208],
   [303, 301, 302],
   [306, 304, 305],
-  ["M9", 307, 308]
+  ["M9", 307, 308],
+  [403, 401, 402],
+  [406, 404, 405],
+  ["T3", "T1", "T2"]
 ];
 
 const oneDay = 24 * 60 * 60 * 1000;
-const inizio = new Date(2020, 6, 22);
+const inizio = new Date(2021, 6, 4);
 const oggi = new Date();
 
 function App() {
-  const [open, setOpen] = React.useState(oggi.getMonth() >= 8 || oggi.getMonth() < 6);
+  const [open, setOpen] = React.useState(oggi.getMonth() >= 8 || oggi.getMonth() < 5);
   const quantiGiorni = (Math.floor(Math.floor(Math.abs((inizio - oggi) / oneDay)) / 4) % appartamenti.length);
   let posizione_in_data = new Array(appartamenti.length);
 
@@ -58,7 +58,7 @@ function App() {
         <DialogTitle id="alert-dialog-title">{"Posizione libera"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Dal 3 settembre a fine giugno gli ombrelloni non sono assegnati.
+            Dal 3 settembre al 3 giugno gli ombrelloni non sono assegnati.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
