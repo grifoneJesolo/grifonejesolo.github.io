@@ -13,13 +13,13 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 const appartamenti = [
-  ["T5", "T6", "T4"], 
-  ["T8", "T9", "T7"],
-  [102, 103, 101],
-  [105, 106, 104],
-  [108, 109, 107],
-  [202, 203, 201],
-  [205, 206, 204],
+  ["T6", "T4", "T5"], 
+  ["T9", "T7", "T8"],
+  [103, 101, 102],
+  [106, 104, 105],
+  [109, 107, 108],
+  [203, 202, 201],
+  [206, 204, 205],
   [209, 207, 208],
   [303, 301, 302],
   [306, 304, 305],
