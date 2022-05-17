@@ -58,7 +58,7 @@ function App() {
         <DialogTitle id="alert-dialog-title">{"Posizione libera"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Dal 3 settembre al 3 giugno gli ombrelloni non sono assegnati.
+            Dal 3 settembre al 31 maggio gli ombrelloni non sono assegnati.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
