@@ -30,7 +30,7 @@ const appartamenti = [
 ];
 
 const oneDay = 24 * 60 * 60 * 1000;
-const inizio = new Date(2022, 4, 32);
+const inizio = new Date(2022, 4, 31);
 const oggi = new Date();
 
 function App() {
